@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var ctaHTML = "";
       if (ctaLink) {
         if (ctaLink.tbc) {
-          ctaHTML = '<a href="#" class="btn btn-tbc" data-tbc="1">TBC</a>';
+          ctaHTML = '<a href="#" class="btn btn-tbc" data-tbc="1">TBA</a>';
         } else {
           ctaHTML = '<a href="' + ctaLink.url + '" target="_blank" rel="noopener" class="btn btn-solid">Luma On! ↗</a>';
         }
