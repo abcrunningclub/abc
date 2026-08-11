@@ -269,8 +269,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
+      var dayClass = event.endDate ? "day range" : "day";
+
       row.innerHTML =
-        '<div class="date-block"><div class="day">' + dayLabel + '</div><div class="month">' + monthLabelText + '</div></div>' +
+        '<div class="date-block"><div class="' + dayClass + '">' + dayLabel + '</div><div class="month">' + monthLabelText + '</div></div>' +
         '<div><h3>' + event.title + '</h3><p class="meta">' + (event.location || "Details coming soon") + '</p></div>' +
         ctaHTML;
 
