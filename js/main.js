@@ -365,4 +365,34 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  /* Fullscreen video lightbox --------------------------------------------*/
+  var videoThumb = document.querySelector("#video-thumb");
+  var videoModal = document.querySelector("#video-modal");
+  var videoModalClose = document.querySelector("#video-modal-close");
+  var videoModalIframe = document.querySelector("#video-modal-iframe");
+  var videoSrc = "https://www.youtube.com/embed/YCE1onLt8Vg?vq=hd1080&rel=0&autoplay=1";
+
+  function openVideoModal() {
+    if (!videoModal) return;
+    videoModalIframe.src = videoSrc;
+    videoModal.classList.add("open");
+  }
+
+  function closeVideoModal() {
+    if (!videoModal) return;
+    videoModal.classList.remove("open");
+    videoModalIframe.src = "";
+  }
+
+  if (videoThumb && videoModal) {
+    videoThumb.addEventListener("click", openVideoModal);
+    videoModalClose.addEventListener("click", closeVideoModal);
+    videoModal.addEventListener("click", function (e) {
+      if (e.target === videoModal) closeVideoModal();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeVideoModal();
+    });
+  }
+
 });

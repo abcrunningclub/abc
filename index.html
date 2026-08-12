@@ -7,7 +7,7 @@
 <meta name="description" content="ABC Running Club — city runs, real friendships. Better weekends start here.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=4">
+<link rel="stylesheet" href="css/style.css?v=5">
 <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
@@ -148,14 +148,10 @@
     <div class="section-head">
       <span class="eyebrow">Enjoy highlight of hyrox sim !</span>
     </div>
-    <div class="video-wrap">
-      <iframe
-        src="https://www.youtube.com/embed/YCE1onLt8Vg?vq=hd1080&rel=0"
-        title="ABC Running Club — Fuel Your Energy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-        loading="lazy"></iframe>
-    </div>
+    <button class="video-thumb" id="video-thumb" aria-label="Play video">
+      <img src="images/gallery/fuel-your-energy-poster.avif" alt="ABC Running Club — Fuel Your Energy">
+      <span class="play-badge"></span>
+    </button>
   </div>
 </section>
 
@@ -268,6 +264,13 @@
   </div>
 </div>
 
-<script src="js/main.js?v=4"></script>
+<div class="video-modal-overlay" id="video-modal">
+  <button class="modal-close video-modal-close" id="video-modal-close" aria-label="Close">&times;</button>
+  <div class="video-modal-frame">
+    <iframe id="video-modal-iframe" src="" title="ABC Running Club — Fuel Your Energy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
+<script src="js/main.js?v=5"></script>
 </body>
 </html>
