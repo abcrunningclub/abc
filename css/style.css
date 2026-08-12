@@ -366,11 +366,31 @@ section:last-of-type {
   position: relative;
   aspect-ratio: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 2px;
+  padding: 2px;
   border-radius: 10px;
   font-size: 0.9rem;
   color: var(--color-text-dim);
+  overflow: hidden;
+}
+
+.cal-day .day-num {
+  line-height: 1;
+}
+
+.cal-day .day-label {
+  display: block;
+  max-width: 100%;
+  font-size: 0.5rem;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0.85;
 }
 
 .cal-day.in-month {
@@ -432,6 +452,53 @@ section:last-of-type {
 .cal-legend .dot.upcoming { background: var(--color-accent); }
 .cal-legend .dot.past { background: var(--color-blue); }
 .cal-legend .dot.today-ring { background: transparent; outline: 2px solid var(--color-text); outline-offset: 1px; }
+
+@media (max-width: 600px) {
+  #calendar {
+    padding: 40px 0;
+  }
+
+  .calendar-head {
+    margin-bottom: 14px;
+  }
+
+  .calendar-head h3 {
+    font-size: 1.1rem;
+    min-width: 140px;
+  }
+
+  .cal-nav-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+
+  .cal-grid {
+    gap: 3px;
+  }
+
+  .cal-weekday {
+    font-size: 0.55rem;
+    padding-bottom: 4px;
+  }
+
+  .cal-day {
+    border-radius: 6px;
+    font-size: 0.65rem;
+    padding: 1px;
+    gap: 1px;
+  }
+
+  .cal-day .day-label {
+    font-size: 0.4rem;
+  }
+
+  .cal-legend {
+    margin-top: 12px;
+    gap: 12px;
+    font-size: 0.6rem;
+  }
+}
 
 /* Modal ----------------------------------------------------------------- */
 

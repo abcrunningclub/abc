@@ -183,7 +183,11 @@ document.addEventListener("DOMContentLoaded", function () {
     var _loop = function (d) {
       var cell = document.createElement("div");
       cell.className = "cal-day in-month";
-      cell.textContent = d;
+
+      var numEl = document.createElement("span");
+      numEl.className = "day-num";
+      numEl.textContent = d;
+      cell.appendChild(numEl);
 
       var iso = toISODate(year, month, d);
 
@@ -199,6 +203,12 @@ document.addEventListener("DOMContentLoaded", function () {
       if (dayEvents.length) {
         var upcoming = !isPast(iso);
         cell.classList.add("has-event", upcoming ? "upcoming" : "past");
+
+        var labelEl = document.createElement("span");
+        labelEl.className = "day-label";
+        labelEl.textContent = dayEvents[0].title;
+        cell.appendChild(labelEl);
+
         cell.addEventListener("click", function () {
           openModal(dayEvents[0]);
         });
