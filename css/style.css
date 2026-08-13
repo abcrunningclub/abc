@@ -595,7 +595,7 @@ section:last-of-type {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
@@ -669,8 +669,18 @@ section:last-of-type {
 
 @media (max-width: 760px) {
   .gallery-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
+}
+
+.gallery-card.gallery-hidden {
+  display: none;
+}
+
+.gallery-see-more {
+  display: block;
+  margin: 24px auto 0;
 }
 
 /* Upcoming events ---------------------------------------------------------*/
