@@ -45,6 +45,16 @@ document.addEventListener("DOMContentLoaded", function () {
       ]
     },
     {
+      date: "2026-07-25",
+      title: "DNA CITY QUEST",
+      location: "S-Oasis",
+      image: "images/gallery/dna-city-quest.jpg",
+      links: [
+        { label: "View Album ↗", url: "https://drive.google.com/drive/folders/1YJIEJXVBOGdv_LuDA2oc2gVUU7CEPxtJ?usp=sharing" },
+        { label: "Event Page ↗", url: "https://luma.com/qeqxs54l" }
+      ]
+    },
+    {
       date: "2026-08-01",
       title: "Balenciaga x Matcha People",
       location: "Matcha People",
