@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Hyrox Thailand — Cheer Squad",
       location: "Hyrox Thailand",
       links: [
-        { label: "To be Announced from AreWeBrewCrew Team!", url: "#", tbc: true }
+        { label: "Cheering — come support the ABC squad!", status: "Cheering", url: "#", tbc: true }
       ]
     },
     {
@@ -305,7 +305,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var ctaHTML = "";
       if (ctaLink) {
         if (ctaLink.tbc) {
-          ctaHTML = '<a href="#" class="btn btn-tbc" data-tbc="1">TBA</a>';
+          ctaHTML = '<a href="#" class="btn btn-tbc" data-tbc="1">' + (ctaLink.status || "TBA") + '</a>';
         } else {
           ctaHTML = '<a href="' + ctaLink.url + '" target="_blank" rel="noopener" class="btn btn-solid">Luma On! ↗</a>';
         }
