@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ]
     },
     {
-      date: "2026-09-06",
+      date: "2026-09-05",
       title: "ABC x DNA",
       location: "Sathorn",
       links: [
