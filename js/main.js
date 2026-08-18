@@ -143,10 +143,10 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       date: "2026-08-30",
-      title: "ABC x MG",
-      location: "Roots, Ari",
+      title: "A.B.C | RUN SMART, LIFE EASY 🚙",
+      location: "Roots at Sathorn",
       links: [
-        { label: "To be Announced from AreWeBrewCrew Team!", url: "#", tbc: true }
+        { label: "Luma On! ↗", url: "https://luma.com/0jioz3dn" }
       ]
     },
     {
