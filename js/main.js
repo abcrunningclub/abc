@@ -137,6 +137,8 @@ document.addEventListener("DOMContentLoaded", function () {
       date: "2026-08-23",
       title: "A.B.C | SHADES IN MOTION",
       location: "Hollywood Street",
+      time: "6:30 - 8:30 AM",
+      image: "images/gallery/shades-in-motion.avif",
       links: [
         { label: "View Album 1 ↗", url: "https://drive.google.com/drive/folders/1QfK-o6R4dXBvuilgRxHgLyklLuOt-RHM" },
         { label: "View Album 2 ↗", url: "https://drive.google.com/drive/folders/1LTUl6b7JuQth2w4746RxCDGwXc0PLJWu" },
