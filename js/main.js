@@ -409,15 +409,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /* Fullscreen video lightbox --------------------------------------------*/
-  var videoThumb = document.querySelector("#video-thumb");
+  var videoThumbs = document.querySelectorAll(".video-thumb");
   var videoModal = document.querySelector("#video-modal");
   var videoModalClose = document.querySelector("#video-modal-close");
   var videoModalIframe = document.querySelector("#video-modal-iframe");
-  var videoSrc = "https://www.youtube.com/embed/YCE1onLt8Vg?vq=hd1080&rel=0&autoplay=1";
 
-  function openVideoModal() {
+  function openVideoModal(ytId) {
     if (!videoModal) return;
-    videoModalIframe.src = videoSrc;
+    videoModalIframe.src = "https://www.youtube.com/embed/" + ytId + "?vq=hd1080&rel=0&autoplay=1";
     videoModal.classList.add("open");
   }
 
@@ -427,8 +426,12 @@ document.addEventListener("DOMContentLoaded", function () {
     videoModalIframe.src = "";
   }
 
-  if (videoThumb && videoModal) {
-    videoThumb.addEventListener("click", openVideoModal);
+  if (videoThumbs.length && videoModal) {
+    videoThumbs.forEach(function (thumb) {
+      thumb.addEventListener("click", function () {
+        openVideoModal(thumb.getAttribute("data-yt"));
+      });
+    });
     videoModalClose.addEventListener("click", closeVideoModal);
     videoModal.addEventListener("click", function (e) {
       if (e.target === videoModal) closeVideoModal();
