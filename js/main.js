@@ -160,11 +160,11 @@ document.addEventListener("DOMContentLoaded", function () {
       ]
     },
     {
-      date: "2026-09-12",
-      title: "ABC x Makro",
-      location: "",
+      date: "2026-09-13",
+      title: "ABC x Makro RakMakRuntothePro",
+      location: "Makro Sathorn",
       links: [
-        { label: "To be Announced from AreWeBrewCrew Team!", url: "#", tbc: true }
+        { label: "App Makro PRO", status: "App Makro PRO", url: "#", tbc: true, solid: true }
       ]
     }
   ];
@@ -306,9 +306,10 @@ document.addEventListener("DOMContentLoaded", function () {
       var ctaHTML = "";
       if (ctaLink) {
         if (ctaLink.tbc) {
-          ctaHTML = '<a href="#" class="btn btn-tbc" data-tbc="1">' + (ctaLink.status || "TBA") + '</a>';
+          var tbcBtnClass = ctaLink.solid ? "btn btn-solid" : "btn btn-tbc";
+          ctaHTML = '<a href="#" class="' + tbcBtnClass + '" data-tbc="1">' + (ctaLink.status || "TBA") + '</a>';
         } else {
-          ctaHTML = '<a href="' + ctaLink.url + '" target="_blank" rel="noopener" class="btn btn-solid">Luma On! ↗</a>';
+          ctaHTML = '<a href="' + ctaLink.url + '" target="_blank" rel="noopener" class="btn btn-solid">' + (ctaLink.status || "Luma On! ↗") + '</a>';
         }
       }
 
@@ -381,7 +382,7 @@ document.addEventListener("DOMContentLoaded", function () {
       a.href = link.url;
       a.textContent = link.label;
       if (link.tbc) {
-        a.className = "btn btn-tbc";
+        a.className = link.solid ? "btn btn-solid" : "btn btn-tbc";
         a.addEventListener("click", function (e) { e.preventDefault(); });
       } else {
         a.target = "_blank";
