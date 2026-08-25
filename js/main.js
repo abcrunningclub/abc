@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "ABC x Makro RakMakRuntothePro",
       location: "Makro Sathorn",
       links: [
-        { label: "App Makro PRO", status: "App Makro PRO", url: "#", tbc: true, solid: true }
+        { label: "App Makro PRO ↗", status: "App Makro PRO ↗", url: "https://makro.moniostudio.com/Main.aspx" }
       ]
     }
   ];
