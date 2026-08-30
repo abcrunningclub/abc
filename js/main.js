@@ -150,7 +150,8 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "A.B.C | RUN SMART, LIFE EASY 🚙",
       location: "Roots at Sathorn",
       links: [
-        { label: "Luma On! ↗", url: "https://luma.com/0jioz3dn" }
+        { label: "Luma On! ↗", url: "https://luma.com/0jioz3dn" },
+        { label: "View Route ↗", url: "https://www.google.com/maps?geocode=FY9W0QAdONv9BQ%3D%3D;FQNb0QAdbfv9BSllDOsHNp_iMDErRND5DeAjQQ%3D%3D;FfJ50QAdKOr9BSmX5-6a0ZjiMDFOuUIDvDqmAg%3D%3D;FXtl0QAd3s39BSm1_LUSzZjiMDGxSiSj-MvWGQ%3D%3D;FXlW0QAd2Nr9BSnVljKha5niMDHkJsT2z3Cchw%3D%3D&daddr=Chong+Nonsi+Canal+Park,+58+Naradhiwas+Rajanagarindra+Rd,+Thung+Maha+Mek,+Sathon,+Bangkok+10120,+Thailand+to:Somboon+Seafood,+%E0%B8%96%E0%B8%99%E0%B8%99+%E0%B8%AA%E0%B8%B8%E0%B8%A3%E0%B8%A7%E0%B8%87%E0%B8%A8%E0%B9%8C+Suriya+Wong,+Bang+Rak,+Bangkok,+Thailand+to:Revo+Bangkok,+Silom+Rd,+Si+Lom,+Bang+Rak,+Bangkok,+Thailand+to:Roots+at+Sathon+South+Sathon+Road,+Yan+Nawa,+Sathon,+Bangkok,+Thailand&saddr=13.7191830,100.5228080&dirflg=w" }
       ]
     },
     {
