@@ -166,6 +166,15 @@ document.addEventListener("DOMContentLoaded", function () {
       ]
     },
     {
+      date: "2026-09-05",
+      title: "ABC x On Run Hub Opening Event",
+      location: "Thephasadin Stadium",
+      links: [
+        { label: "Invited", status: "Invited", url: "#", tbc: true },
+        { label: "View Location ↗", url: "https://maps.app.goo.gl/vaR2r3FLn9nHGkWb7" }
+      ]
+    },
+    {
       date: "2026-09-13",
       title: "ABC x Makro RakMakRuntothePro",
       location: "Makro Sathorn",
