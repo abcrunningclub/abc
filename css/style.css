@@ -318,6 +318,25 @@ section:last-of-type {
 
 /* Calendar ------------------------------------------------------------ */
 
+#calendar {
+  position: relative;
+  overflow: hidden;
+}
+
+#calendar::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../images/calendar-bg.jpg") center / cover no-repeat;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+#calendar .container {
+  position: relative;
+  z-index: 1;
+}
+
 .calendar-head {
   display: flex;
   align-items: center;
