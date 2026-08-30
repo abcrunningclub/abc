@@ -149,6 +149,8 @@ document.addEventListener("DOMContentLoaded", function () {
       date: "2026-08-30",
       title: "A.B.C | RUN SMART, LIFE EASY 🚙",
       location: "Roots at Sathorn",
+      time: "6:15 - 9:30 AM · 4 KM",
+      image: "images/gallery/run-smart-life-easy.jpg",
       links: [
         { label: "Luma On! ↗", url: "https://luma.com/0jioz3dn" },
         { label: "View Album ↗", url: "https://drive.google.com/drive/u/0/folders/18VrNHl_avQL5sT9ZvaEgV4SBKZxNLp0x" },
