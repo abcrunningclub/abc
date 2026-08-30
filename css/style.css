@@ -952,6 +952,25 @@ section:last-of-type {
 
 /* Meet us at ------------------------------------------------------------ */
 
+#meet-us-at {
+  position: relative;
+  overflow: hidden;
+}
+
+#meet-us-at::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../images/meet-us-at-bg.jpg") center / cover no-repeat;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+#meet-us-at .container {
+  position: relative;
+  z-index: 1;
+}
+
 .social-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
