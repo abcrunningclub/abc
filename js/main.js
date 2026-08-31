@@ -159,10 +159,10 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       date: "2026-09-05",
-      title: "ABC x DNA",
+      title: "A.B.C | A.B.C FOLLOWED BY DNA VOL.2 🥛",
       location: "Just A Drink Maybe",
       links: [
-        { label: "To be Announced from AreWeBrewCrew Team!", url: "#", tbc: true }
+        { label: "Luma On! ↗", url: "https://luma.com/k7ztc2w9" }
       ]
     },
     {
