@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       date: "2026-09-05",
-      title: "A.B.C | A.B.C FOLLOWED BY DNA VOL.2 🥛",
+      title: "A.B.C FOLLOWED BY DNA VOL.2 🥛",
       location: "Just A Drink Maybe",
       links: [
         { label: "Luma On! ↗", url: "https://luma.com/k7ztc2w9" }
@@ -252,10 +252,16 @@ document.addEventListener("DOMContentLoaded", function () {
         var upcoming = !isPast(iso);
         cell.classList.add("has-event", upcoming ? "upcoming" : "past");
 
-        var labelEl = document.createElement("span");
-        labelEl.className = "day-label";
-        labelEl.textContent = dayEvents[0].title;
-        cell.appendChild(labelEl);
+        dayEvents.forEach(function (ev) {
+          var labelEl = document.createElement("span");
+          labelEl.className = "day-label";
+          labelEl.textContent = ev.title;
+          labelEl.addEventListener("click", function (e) {
+            e.stopPropagation();
+            openModal(ev);
+          });
+          cell.appendChild(labelEl);
+        });
 
         cell.addEventListener("click", function () {
           openModal(dayEvents[0]);
