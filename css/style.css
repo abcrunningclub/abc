@@ -626,19 +626,13 @@ section:last-of-type {
 /* Gallery ----------------------------------------------------------------*/
 
 .gallery-grid {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x proximity;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  padding-bottom: 12px;
-  -webkit-overflow-scrolling: touch;
 }
 
 .gallery-card {
   position: relative;
-  flex: 0 0 auto;
-  width: 240px;
-  scroll-snap-align: start;
   border-radius: 14px;
   overflow: hidden;
   aspect-ratio: 4 / 5;
@@ -707,12 +701,18 @@ section:last-of-type {
 
 @media (max-width: 760px) {
   .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
+}
 
-  .gallery-card {
-    width: 190px;
-  }
+.gallery-card.gallery-hidden {
+  display: none;
+}
+
+.gallery-see-more {
+  display: block;
+  margin: 24px auto 0;
 }
 
 /* Upcoming events ---------------------------------------------------------*/
@@ -971,34 +971,23 @@ section:last-of-type {
 /* Partnerships ---------------------------------------------------------- */
 
 .partner-grid {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x proximity;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 28px;
-  padding-bottom: 12px;
-  -webkit-overflow-scrolling: touch;
 }
 
 @media (max-width: 600px) {
   .partner-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
 }
 
 .partner-item {
   display: flex;
-  flex: 0 0 auto;
-  width: 150px;
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  scroll-snap-align: start;
-}
-
-@media (max-width: 600px) {
-  .partner-item {
-    width: 120px;
-  }
 }
 
 .partner-logo-box {
