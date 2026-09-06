@@ -717,6 +717,25 @@ section:last-of-type {
 
 /* Upcoming events ---------------------------------------------------------*/
 
+#upcoming {
+  position: relative;
+  overflow: hidden;
+}
+
+#upcoming::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../images/upcoming-bg.jpg") center / cover no-repeat;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+#upcoming .container {
+  position: relative;
+  z-index: 1;
+}
+
 .event-row {
   display: grid;
   grid-template-columns: 100px 1fr auto;
