@@ -140,8 +140,11 @@ document.addEventListener("DOMContentLoaded", function () {
       date: "2026-09-05",
       title: "A.B.C FOLLOWED BY DNA VOL.2 🥛",
       location: "Just A Drink Maybe",
+      image: "images/gallery/dna-vol2-poster.jpg",
       links: [
-        { label: "Luma On! ↗", url: "https://luma.com/k7ztc2w9" }
+        { label: "Luma On! ↗", url: "https://luma.com/k7ztc2w9" },
+        { label: "View Route ↗", url: "https://www.google.com/maps?geocode=FbZl0QAdbPH9BSmx7KPeq5_iMDF_xK6-XnoZ8w%3D%3D;FZV20QAdoe39BSlj0ksRCZniMDFmKTdCNZiSyw%3D%3D;FQx50QAdtL39BSlzKacExZjiMDEAYNFEG-Fp3g%3D%3D;FS9v0QAdRsH9BSlx0brd2pjiMDGCrSkRBkmDdQ%3D%3D;Fc5j0QAdysP9BSktFwR6BpniMDGXCCpCp-Kz9A%3D%3D;FVhq0QAdpdv9BSmfJezl0ZjiMDHEBRGWJakNmA%3D%3D;FbZl0QAdbPH9BSmx7KPeq5_iMDF_xK6-XnoZ8w%3D%3D&daddr=PGGH+X22+%E0%B8%AA%E0%B8%A7%E0%B8%99%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%B0%E0%B8%84%E0%B8%A5%E0%B8%AD%E0%B8%87%E0%B8%8A%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%99%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B8%B5+(%E0%B9%80%E0%B8%9F%E0%B8%AA+2)+Suriya+Wong,+Bang+Rak,+Bangkok+10500+++to:%E0%B9%84%E0%B8%9B%E0%B8%A3%E0%B8%A9%E0%B8%93%E0%B8%B5%E0%B8%A2%E0%B9%8C%E0%B9%84%E0%B8%97%E0%B8%A2+%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%E0%B8%9A%E0%B8%B2%E0%B8%87%E0%B8%A3%E0%B8%B1%E0%B8%81+Charoen+Krung+32+Alley,+Bang+Rak,+Bangkok+++to:MaLet%27s+Cafe+%26+Coffee+Roastery,+1222+%E0%B8%96.+%E0%B9%80%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%8D%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87+Bang+Rak,+Bangkok+10500+++to:%E0%B8%84%E0%B8%A3%E0%B8%B1%E0%B8%A7%E0%B8%9E%E0%B8%A3%E0%B8%97%E0%B8%B4%E0%B8%9E%E0%B8%A2%E0%B9%8C+%E0%B8%9C%E0%B8%B1%E0%B8%94%E0%B9%84%E0%B8%97%E0%B8%A2%E0%B8%A3%E0%B8%AA%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%94+Soi+Charoen+Krung+49,+Suriya+Wong,+Bang+Rak,+Bangkok+++to:%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A8%E0%B8%A3%E0%B8%B5%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%AD%E0%B8%B8%E0%B8%A1%E0%B8%B2%E0%B9%80%E0%B8%97%E0%B8%A7%E0%B8%B5+(%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%81%E0%B8%82%E0%B8%81)+Pan+Road,+Bang+Rak,+Bangkok+++to:Just+A+Drink+Maybe+-+Bagel+Coffee+Shop,+Soi+Sueksa+Witthaya,+Si+Lom,+Bang+Rak,+Bangkok&saddr=Just+A+Drink+Maybe+-+Bagel+Coffee+Shop,+Soi+Sueksa+Witthaya,+Si+Lom,+Bang+Rak,+Bangkok&dirflg=w" },
+        { label: "View Album ↗", url: "https://drive.google.com/drive/folders/1gZZTC5GzRehFXXeJvFEBXKH1cqTAm2ci" }
       ]
     },
     {
