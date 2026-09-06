@@ -19,27 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* Gallery — show 8 most recent, reveal the rest on demand -------------*/
-  var galleryGrid = document.querySelector("#gallery-grid");
-  var gallerySeeMore = document.querySelector("#gallery-see-more");
-  var GALLERY_LIMIT = 8;
-
-  if (galleryGrid && gallerySeeMore) {
-    var galleryCards = Array.from(galleryGrid.querySelectorAll(".gallery-card"));
-    if (galleryCards.length > GALLERY_LIMIT) {
-      galleryCards.slice(GALLERY_LIMIT).forEach(function (card) {
-        card.classList.add("gallery-hidden");
-      });
-      gallerySeeMore.style.display = "inline-flex";
-      gallerySeeMore.addEventListener("click", function () {
-        galleryCards.forEach(function (card) {
-          card.classList.remove("gallery-hidden");
-        });
-        gallerySeeMore.style.display = "none";
-      });
-    }
-  }
-
   /* Event data -------------------------------------------------------- */
   var events = [
     {
