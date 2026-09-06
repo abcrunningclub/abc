@@ -626,13 +626,15 @@ section:last-of-type {
 /* Gallery ----------------------------------------------------------------*/
 
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 
 .gallery-card {
   position: relative;
+  width: 240px;
   border-radius: 14px;
   overflow: hidden;
   aspect-ratio: 4 / 5;
@@ -701,18 +703,12 @@ section:last-of-type {
 
 @media (max-width: 760px) {
   .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
-}
 
-.gallery-card.gallery-hidden {
-  display: none;
-}
-
-.gallery-see-more {
-  display: block;
-  margin: 24px auto 0;
+  .gallery-card {
+    width: 150px;
+  }
 }
 
 /* Upcoming events ---------------------------------------------------------*/
