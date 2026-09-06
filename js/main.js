@@ -181,6 +181,14 @@ document.addEventListener("DOMContentLoaded", function () {
       links: [
         { label: "App Makro PRO ↗", status: "App Makro PRO ↗", url: "https://makro.moniostudio.com/Main.aspx" }
       ]
+    },
+    {
+      date: "2026-09-26",
+      title: "ABC x Emilys",
+      location: "Marche Thonglor",
+      links: [
+        { label: "To be Announced", url: "#", tbc: true }
+      ]
     }
   ];
 
