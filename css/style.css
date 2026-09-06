@@ -985,6 +985,25 @@ section:last-of-type {
 
 /* Partnerships ---------------------------------------------------------- */
 
+#partnerships {
+  position: relative;
+  overflow: hidden;
+}
+
+#partnerships::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../images/partnerships-bg.jpg") center / cover no-repeat;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+#partnerships .container {
+  position: relative;
+  z-index: 1;
+}
+
 .partner-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
