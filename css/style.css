@@ -311,8 +311,12 @@ section:last-of-type {
   max-width: 900px;
 }
 
+.hero-cta {
+  margin-top: 40px;
+}
+
 .hero .scroll-cue {
-  margin-top: 64px;
+  margin-top: 40px;
   color: var(--color-text-dim);
   font-size: 0.75rem;
   letter-spacing: 0.2em;
