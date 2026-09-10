@@ -315,6 +315,13 @@ section:last-of-type {
   margin-top: 40px;
 }
 
+.hero-cta-note {
+  margin-top: 12px;
+  font-size: 0.75rem;
+  color: var(--color-text-dim);
+  letter-spacing: 0.04em;
+}
+
 .hero .scroll-cue {
   margin-top: 40px;
   color: var(--color-text-dim);
