@@ -165,6 +165,14 @@ document.addEventListener("DOMContentLoaded", function () {
       ]
     },
     {
+      date: "2026-09-20",
+      title: "Public Run — Songwat Route Survey",
+      location: "Songwat",
+      links: [
+        { label: "Luma Coming Soon", status: "Luma Coming Soon", url: "#", tbc: true }
+      ]
+    },
+    {
       date: "2026-09-26",
       title: "ABC x Emilys",
       location: "Marche Thonglor",
