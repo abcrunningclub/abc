@@ -165,7 +165,6 @@ document.addEventListener("DOMContentLoaded", function () {
       ]
     },
     {
-    {
       date: "2026-09-26",
       title: "ABC x Emilys",
       location: "Marche Thonglor",
