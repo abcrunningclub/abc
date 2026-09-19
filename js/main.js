@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       date: "2026-09-26",
-      title: "ABC x Emilys",
+      title: "A.B.C x Emily's | City Stride and Shred",
       location: "Marche Thonglor",
       links: [
         { label: "To be Announced", url: "#", tbc: true }
