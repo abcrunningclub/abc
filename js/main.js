@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   function tbcColorClass(status) {
-    if (status === "Invited") return " btn-tbc-blue";
+    if (status === "Invited") return " btn-tbc-accent";
     if (status === "Postponed") return " btn-tbc-red";
     return "";
   }

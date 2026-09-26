@@ -168,6 +168,12 @@ section:last-of-type {
   color: var(--color-blue);
 }
 
+.btn-tbc-accent,
+.btn-tbc-accent:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
 .btn-tbc-red,
 .btn-tbc-red:hover {
   border-color: var(--color-red);
