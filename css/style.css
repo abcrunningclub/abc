@@ -825,7 +825,11 @@ section:last-of-type {
   }
 
   .event-row .meta {
-    display: none;
+    display: block;
+    font-size: 0.68rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .event-row .btn {
