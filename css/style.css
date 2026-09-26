@@ -13,6 +13,7 @@
   --color-line: #222222;
   --color-accent: #e0f700;
   --color-blue: #005fee;
+  --color-red: #ff4d4d;
 
   --font-display: "Bebas Neue", "Oswald", "Arial Narrow", sans-serif;
   --font-body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -159,6 +160,18 @@ section:last-of-type {
   background: transparent;
   border-color: var(--color-text-dim);
   color: var(--color-text-dim);
+}
+
+.btn-tbc-blue,
+.btn-tbc-blue:hover {
+  border-color: var(--color-blue);
+  color: var(--color-blue);
+}
+
+.btn-tbc-red,
+.btn-tbc-red:hover {
+  border-color: var(--color-red);
+  color: var(--color-red);
 }
 
 /* Header / Nav ---------------------------------------------------------- */

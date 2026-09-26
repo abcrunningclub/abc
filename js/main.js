@@ -1,5 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  function tbcColorClass(status) {
+    if (status === "Invited") return " btn-tbc-blue";
+    if (status === "Postponed") return " btn-tbc-red";
+    return "";
+  }
+
   /* Mobile nav toggle ----------------------------------------------------*/
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.querySelector(".nav");
@@ -342,7 +348,7 @@ document.addEventListener("DOMContentLoaded", function () {
       var ctaHTML = "";
       if (ctaLink) {
         if (ctaLink.tbc) {
-          var tbcBtnClass = ctaLink.solid ? "btn btn-solid" : "btn btn-tbc";
+          var tbcBtnClass = ctaLink.solid ? "btn btn-solid" : "btn btn-tbc" + tbcColorClass(ctaLink.status);
           ctaHTML = '<a href="#" class="' + tbcBtnClass + '" data-tbc="1">' + (ctaLink.status || "TBA") + '</a>';
         } else {
           ctaHTML = '<a href="' + ctaLink.url + '" target="_blank" rel="noopener" class="btn btn-solid">' + (ctaLink.status || "Luma On! ↗") + '</a>';
@@ -418,7 +424,7 @@ document.addEventListener("DOMContentLoaded", function () {
       a.href = link.url;
       a.textContent = link.label;
       if (link.tbc) {
-        a.className = link.solid ? "btn btn-solid" : "btn btn-tbc";
+        a.className = link.solid ? "btn btn-solid" : "btn btn-tbc" + tbcColorClass(link.status);
         a.addEventListener("click", function (e) { e.preventDefault(); });
       } else {
         a.target = "_blank";
