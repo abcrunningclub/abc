@@ -187,6 +187,15 @@ document.addEventListener("DOMContentLoaded", function () {
       links: [
         { label: "To be Announced", url: "#", tbc: true }
       ]
+    },
+    {
+      date: "2026-10-17",
+      endDate: "2026-10-18",
+      title: "A.B.C x MG Rally",
+      location: "Phetchaburi",
+      links: [
+        { label: "Invited", status: "Invited", url: "#", tbc: true }
+      ]
     }
   ];
 
