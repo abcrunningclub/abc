@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "A.B.C x Emily's | City Stride and Shred",
       location: "Marche Thonglor",
       links: [
-        { label: "To be Announced", url: "#", tbc: true }
+        { label: "Postponed", status: "Postponed", url: "#", tbc: true }
       ]
     },
     {
