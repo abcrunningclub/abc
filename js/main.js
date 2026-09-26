@@ -171,6 +171,22 @@ document.addEventListener("DOMContentLoaded", function () {
       links: [
         { label: "To be Announced", url: "#", tbc: true }
       ]
+    },
+    {
+      date: "2026-10-03",
+      title: "A.B.C x Dutchmill",
+      location: "PAAK Phayathai",
+      links: [
+        { label: "To be Announced", url: "#", tbc: true }
+      ]
+    },
+    {
+      date: "2026-10-11",
+      title: "A.B.C x Sunnies",
+      location: "Dusit Central Park",
+      links: [
+        { label: "To be Announced", url: "#", tbc: true }
+      ]
     }
   ];
 
