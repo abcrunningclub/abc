@@ -25,6 +25,50 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  /* City map --------------------------------------------------------------*/
+  var mapEl = document.querySelector("#map");
+  if (mapEl && window.L) {
+    // Coordinates looked up directly on Google Maps for each event's real venue.
+    var mapPins = [
+      { name: "Start Better with DBD (Drop by Dough)", date: "Jul 12", lat: 13.726133, lng: 100.5435577 },
+      { name: "Pace and Pour x Pacamara", date: "Jul 19", lat: 13.7242117, lng: 100.5375355 },
+      { name: "DNA City Quest", date: "Jul 25", lat: 13.8074639, lng: 100.5592531 },
+      { name: "Balenciaga x Matcha People", date: "Aug 1", lat: 13.7829368, lng: 100.5429587 },
+      { name: "Friends of Sunday", date: "Aug 2", lat: 13.7880061, lng: 100.5417107 },
+      { name: "Fuel Your Energy", date: "Aug 8", lat: 13.7501309, lng: 100.5614717 },
+      { name: "Every Miles Together", date: "Aug 9", lat: 13.7809696, lng: 100.5495164 },
+      { name: "Hyrox Thailand — Cheer Squad", date: "Aug 14–16", lat: 13.7245214, lng: 100.5589244 },
+      { name: "A.B.C | Shades in Motion", date: "Aug 23", lat: 13.7510766, lng: 100.5319527 },
+      { name: "A.B.C | Run Smart, Life Easy", date: "Aug 30", lat: 13.719161, lng: 100.5227116 },
+      { name: "ABC x On Run Hub Opening", date: "Sep 5", lat: 13.7455974, lng: 100.5276033 },
+      { name: "A.B.C Followed by DNA Vol.2", date: "Sep 5", lat: 13.723062, lng: 100.5284921 },
+      { name: "ABC x Makro RakMakRuntothePro", date: "Sep 13", lat: 13.7097744, lng: 100.5353689 },
+      { name: "A.B.C x Emily's | City Stride and Shred", date: "Sep 26", lat: 13.7283702, lng: 100.5811107 },
+      { name: "A.B.C x Dutchmill", date: "Oct 3", lat: 13.7584478, lng: 100.5344687 },
+      { name: "A.B.C x Sunnies", date: "Oct 11", lat: 13.7287601, lng: 100.5375563 },
+      { name: "A.B.C x MG Rally", date: "Oct 17–18", lat: 12.9035085, lng: 99.634135 }
+    ];
+
+    var cityMap = L.map(mapEl, { scrollWheelZoom: false }).setView([13.74, 100.53], 12);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: "&copy; OpenStreetMap contributors",
+      maxZoom: 19
+    }).addTo(cityMap);
+
+    var mapPinIcon = L.divIcon({
+      className: "",
+      html: '<div style="width:14px;height:14px;border-radius:50%;background:#e0f700;border:2px solid #050505;box-shadow:0 0 0 2px #e0f700;"></div>',
+      iconSize: [14, 14],
+      iconAnchor: [7, 7]
+    });
+
+    mapPins.forEach(function (e) {
+      L.marker([e.lat, e.lng], { icon: mapPinIcon }).addTo(cityMap)
+        .bindPopup('<div class="popup-title">' + e.name + '</div><div class="popup-date">' + e.date + '</div>');
+    });
+  }
+
   /* Event data -------------------------------------------------------- */
   var events = [
     {

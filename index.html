@@ -31,7 +31,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=26">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="css/style.css?v=27">
 <link rel="icon" type="image/png" href="images/favicon-transparent.png">
 </head>
 <body>
@@ -168,6 +169,20 @@
       </a>
     </div>
     <p class="note-text">More albums added after every run.</p>
+  </div>
+</section>
+
+<section id="city-map">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Where We've Run</span>
+    </div>
+    <div id="map"></div>
+    <div class="stats-row">
+      <div class="stat"><div class="num">17</div><div class="label">Events</div></div>
+      <div class="stat"><div class="num">17</div><div class="label">Locations</div></div>
+      <div class="stat"><div class="num">1</div><div class="label">City, Endless Routes</div></div>
+    </div>
   </div>
 </section>
 
@@ -399,6 +414,7 @@
   </div>
 </div>
 
-<script src="js/main.js?v=27"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="js/main.js?v=28"></script>
 </body>
 </html>
