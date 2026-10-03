@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
       { name: "ABC x Makro RakMakRuntothePro", date: "Sep 13", lat: 13.7097744, lng: 100.5353689 },
       { name: "A.B.C x Emily's | City Stride and Shred", date: "Sep 26", lat: 13.7283702, lng: 100.5811107 },
       { name: "A.B.C x Dutchmill", date: "Oct 3", lat: 13.7584478, lng: 100.5344687 },
-      { name: "A.B.C x Sunnies", date: "Oct 11", lat: 13.7287601, lng: 100.5375563 },
+      { name: "A.B.C x Sunnies", date: "Oct 17", lat: 13.7287601, lng: 100.5375563 },
       { name: "A.B.C x MG Rally", date: "Oct 17–18", lat: 12.9035085, lng: 99.634135 }
     ];
 
@@ -227,15 +227,15 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "A.B.C x Dutchmill",
       location: "PAAK Phayathai",
       links: [
-        { label: "To be Announced", url: "#", tbc: true }
+        { label: "Luma On! ↗", url: "https://luma.com/wzoplkre" }
       ]
     },
     {
-      date: "2026-10-11",
+      date: "2026-10-17",
       title: "A.B.C x Sunnies",
       location: "Dusit Central Park",
       links: [
-        { label: "To be Announced", url: "#", tbc: true }
+        { label: "Luma On! ↗", url: "https://luma.com/abe0nfk4" }
       ]
     },
     {
