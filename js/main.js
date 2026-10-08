@@ -226,6 +226,7 @@ document.addEventListener("DOMContentLoaded", function () {
       date: "2026-10-03",
       title: "A.B.C x Dutchmill",
       location: "PAAK Phayathai",
+      image: "images/gallery/dutchmill-run-to-the-shelf.jpg",
       links: [
         { label: "Luma On! ↗", url: "https://luma.com/wzoplkre" }
       ]
