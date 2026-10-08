@@ -1149,6 +1149,10 @@ section:last-of-type {
 .tier-2 .partner-logo-box { padding: 8px; }
 .tier-3 .partner-logo-box { padding: 6px; border-radius: 12px; }
 
+.tier-1 .partner-logo-box img { border-radius: 2px; }
+.tier-2 .partner-logo-box img { border-radius: 6px; }
+.tier-3 .partner-logo-box img { border-radius: 6px; }
+
 .tier-1 .partner-item span { font-size: 0.9rem; }
 .tier-3 .partner-item span { font-size: 0.7rem; }
 
@@ -1163,6 +1167,10 @@ section:last-of-type {
   .tier-1 .partner-logo-box { padding: 10px; }
   .tier-2 .partner-logo-box { padding: 7px; }
   .tier-3 .partner-logo-box { padding: 5px; border-radius: 10px; }
+
+  .tier-1 .partner-logo-box img { border-radius: 4px; }
+  .tier-2 .partner-logo-box img { border-radius: 7px; }
+  .tier-3 .partner-logo-box img { border-radius: 5px; }
 
   .tier-1 .partner-item span { font-size: 0.8rem; }
   .tier-2 .partner-item span { font-size: 0.72rem; }
