@@ -1145,9 +1145,9 @@ section:last-of-type {
   width: min(var(--tier-max), calc((100% - (var(--cols) - 1) * var(--tier-gap)) / var(--cols)));
 }
 
-.tier-1 .partner-logo-box { padding: 24px; }
-.tier-2 .partner-logo-box { padding: 16px; }
-.tier-3 .partner-logo-box { padding: 12px; border-radius: 12px; }
+.tier-1 .partner-logo-box { padding: 12px; }
+.tier-2 .partner-logo-box { padding: 8px; }
+.tier-3 .partner-logo-box { padding: 6px; border-radius: 12px; }
 
 .tier-1 .partner-item span { font-size: 0.9rem; }
 .tier-3 .partner-item span { font-size: 0.7rem; }
@@ -1160,9 +1160,9 @@ section:last-of-type {
   .partner-tier.tier-2 { --cols: 3; }
   .partner-tier.tier-3 { --cols: 4; --tier-gap: 10px; }
 
-  .tier-1 .partner-logo-box { padding: 20px; }
-  .tier-2 .partner-logo-box { padding: 14px; }
-  .tier-3 .partner-logo-box { padding: 8px; border-radius: 10px; }
+  .tier-1 .partner-logo-box { padding: 10px; }
+  .tier-2 .partner-logo-box { padding: 7px; }
+  .tier-3 .partner-logo-box { padding: 5px; border-radius: 10px; }
 
   .tier-1 .partner-item span { font-size: 0.8rem; }
   .tier-2 .partner-item span { font-size: 0.72rem; }
