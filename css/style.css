@@ -1135,7 +1135,7 @@ section:last-of-type {
 
 .partner-tier.tier-1 { --cols: 3; --tier-max: 220px; }
 .partner-tier.tier-2 { --cols: 6; --tier-max: 150px; }
-.partner-tier.tier-3 { --cols: 7; --tier-max: 110px; --tier-gap: 24px; }
+.partner-tier.tier-3 { --cols: 8; --tier-max: 110px; --tier-gap: 24px; }
 
 .partner-item {
   display: flex;
