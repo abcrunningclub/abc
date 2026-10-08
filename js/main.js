@@ -228,7 +228,8 @@ document.addEventListener("DOMContentLoaded", function () {
       location: "PAAK Phayathai",
       image: "images/gallery/dutchmill-run-to-the-shelf.jpg",
       links: [
-        { label: "Luma On! ↗", url: "https://luma.com/wzoplkre" }
+        { label: "Luma On! ↗", url: "https://luma.com/wzoplkre" },
+        { label: "View Album ↗", url: "https://drive.google.com/drive/folders/1SKX2lgHjSs1RhTvFuvtUsOTNq8GADAFU" }
       ]
     },
     {
