@@ -44,10 +44,11 @@ document.addEventListener("DOMContentLoaded", function () {
       { name: "ABC x On Run Hub Opening", date: "Sep 5", iso: "2026-09-05", lat: 13.7455974, lng: 100.5276033 },
       { name: "A.B.C Followed by DNA Vol.2", date: "Sep 5", iso: "2026-09-05", lat: 13.723062, lng: 100.5284921 },
       { name: "ABC x Makro RakMakRuntothePro", date: "Sep 13", iso: "2026-09-13", lat: 13.7097744, lng: 100.5353689 },
-      { name: "A.B.C x Emily's | City Stride and Shred", date: "Sep 26", iso: "2026-09-26", postponed: true, lat: 13.7283702, lng: 100.5811107 },
       { name: "A.B.C x Dutchmill", date: "Oct 3", iso: "2026-10-03", lat: 13.7584478, lng: 100.5344687 },
       { name: "A.B.C x Sunnies", date: "Oct 17", iso: "2026-10-17", lat: 13.7287601, lng: 100.5375563 },
-      { name: "A.B.C x MG Rally", date: "Oct 17–18", iso: "2026-10-17", lat: 12.9035085, lng: 99.634135 }
+      { name: "A.B.C x MG Rally", date: "Oct 17–18", iso: "2026-10-17", lat: 12.9035085, lng: 99.634135 },
+      { name: "A.B.C x SUHO Sushi", date: "Oct 23", iso: "2026-10-23", lat: 13.743631, lng: 100.5406107 },
+      { name: "A.B.C x Emily's | City Stride and Shred", date: "Oct 24", iso: "2026-10-24", lat: 13.7283702, lng: 100.5811107 }
     ];
 
     var nowForMap = new Date();
@@ -234,14 +235,6 @@ document.addEventListener("DOMContentLoaded", function () {
       ]
     },
     {
-      date: "2026-09-26",
-      title: "A.B.C x Emily's | City Stride and Shred",
-      location: "Marche Thonglor",
-      links: [
-        { label: "Postponed", status: "Postponed", url: "#", tbc: true }
-      ]
-    },
-    {
       date: "2026-10-03",
       title: "A.B.C x Dutchmill",
       location: "PAAK Phayathai",
@@ -266,6 +259,22 @@ document.addEventListener("DOMContentLoaded", function () {
       location: "Phetchaburi",
       links: [
         { label: "Invited", status: "Invited", url: "#", tbc: true }
+      ]
+    },
+    {
+      date: "2026-10-23",
+      title: "A.B.C x SUHO Sushi",
+      location: "Erawan Bangkok",
+      links: [
+        { label: "To be Announced", url: "#", tbc: true }
+      ]
+    },
+    {
+      date: "2026-10-24",
+      title: "A.B.C x Emily's | City Stride and Shred",
+      location: "Marche Thonglor",
+      links: [
+        { label: "To be Announced", url: "#", tbc: true }
       ]
     }
   ];
