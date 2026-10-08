@@ -29,25 +29,44 @@ document.addEventListener("DOMContentLoaded", function () {
   var mapEl = document.querySelector("#map");
   if (mapEl && window.L) {
     // Coordinates looked up directly on Google Maps for each event's real venue.
-    var mapPins = [
-      { name: "Start Better with DBD (Drop by Dough)", date: "Jul 12", lat: 13.726133, lng: 100.5435577 },
-      { name: "Pace and Pour x Pacamara", date: "Jul 19", lat: 13.7242117, lng: 100.5375355 },
-      { name: "DNA City Quest", date: "Jul 25", lat: 13.8074639, lng: 100.5592531 },
-      { name: "Balenciaga x Matcha People", date: "Aug 1", lat: 13.7829368, lng: 100.5429587 },
-      { name: "Friends of Sunday", date: "Aug 2", lat: 13.7880061, lng: 100.5417107 },
-      { name: "Fuel Your Energy", date: "Aug 8", lat: 13.7501309, lng: 100.5614717 },
-      { name: "Every Miles Together", date: "Aug 9", lat: 13.7809696, lng: 100.5495164 },
-      { name: "Hyrox Thailand — Cheer Squad", date: "Aug 14–16", lat: 13.7245214, lng: 100.5589244 },
-      { name: "A.B.C | Shades in Motion", date: "Aug 23", lat: 13.7510766, lng: 100.5319527 },
-      { name: "A.B.C | Run Smart, Life Easy", date: "Aug 30", lat: 13.719161, lng: 100.5227116 },
-      { name: "ABC x On Run Hub Opening", date: "Sep 5", lat: 13.7455974, lng: 100.5276033 },
-      { name: "A.B.C Followed by DNA Vol.2", date: "Sep 5", lat: 13.723062, lng: 100.5284921 },
-      { name: "ABC x Makro RakMakRuntothePro", date: "Sep 13", lat: 13.7097744, lng: 100.5353689 },
-      { name: "A.B.C x Emily's | City Stride and Shred", date: "Sep 26", lat: 13.7283702, lng: 100.5811107 },
-      { name: "A.B.C x Dutchmill", date: "Oct 3", lat: 13.7584478, lng: 100.5344687 },
-      { name: "A.B.C x Sunnies", date: "Oct 17", lat: 13.7287601, lng: 100.5375563 },
-      { name: "A.B.C x MG Rally", date: "Oct 17–18", lat: 12.9035085, lng: 99.634135 }
+    // Only events that have actually happened are shown (iso <= today, not postponed).
+    var allMapPins = [
+      { name: "Start Better with DBD (Drop by Dough)", date: "Jul 12", iso: "2026-07-12", lat: 13.726133, lng: 100.5435577 },
+      { name: "Pace and Pour x Pacamara", date: "Jul 19", iso: "2026-07-19", lat: 13.7242117, lng: 100.5375355 },
+      { name: "DNA City Quest", date: "Jul 25", iso: "2026-07-25", lat: 13.8074639, lng: 100.5592531 },
+      { name: "Balenciaga x Matcha People", date: "Aug 1", iso: "2026-08-01", lat: 13.7829368, lng: 100.5429587 },
+      { name: "Friends of Sunday", date: "Aug 2", iso: "2026-08-02", lat: 13.7880061, lng: 100.5417107 },
+      { name: "Fuel Your Energy", date: "Aug 8", iso: "2026-08-08", lat: 13.7501309, lng: 100.5614717 },
+      { name: "Every Miles Together", date: "Aug 9", iso: "2026-08-09", lat: 13.7809696, lng: 100.5495164 },
+      { name: "Hyrox Thailand — Cheer Squad", date: "Aug 14–16", iso: "2026-08-14", lat: 13.7245214, lng: 100.5589244 },
+      { name: "A.B.C | Shades in Motion", date: "Aug 23", iso: "2026-08-23", lat: 13.7510766, lng: 100.5319527 },
+      { name: "A.B.C | Run Smart, Life Easy", date: "Aug 30", iso: "2026-08-30", lat: 13.719161, lng: 100.5227116 },
+      { name: "ABC x On Run Hub Opening", date: "Sep 5", iso: "2026-09-05", lat: 13.7455974, lng: 100.5276033 },
+      { name: "A.B.C Followed by DNA Vol.2", date: "Sep 5", iso: "2026-09-05", lat: 13.723062, lng: 100.5284921 },
+      { name: "ABC x Makro RakMakRuntothePro", date: "Sep 13", iso: "2026-09-13", lat: 13.7097744, lng: 100.5353689 },
+      { name: "A.B.C x Emily's | City Stride and Shred", date: "Sep 26", iso: "2026-09-26", postponed: true, lat: 13.7283702, lng: 100.5811107 },
+      { name: "A.B.C x Dutchmill", date: "Oct 3", iso: "2026-10-03", lat: 13.7584478, lng: 100.5344687 },
+      { name: "A.B.C x Sunnies", date: "Oct 17", iso: "2026-10-17", lat: 13.7287601, lng: 100.5375563 },
+      { name: "A.B.C x MG Rally", date: "Oct 17–18", iso: "2026-10-17", lat: 12.9035085, lng: 99.634135 }
     ];
+
+    var nowForMap = new Date();
+    var todayForMap = nowForMap.getFullYear() + "-" +
+      ("0" + (nowForMap.getMonth() + 1)).slice(-2) + "-" +
+      ("0" + nowForMap.getDate()).slice(-2);
+
+    var mapPins = allMapPins.filter(function (p) {
+      return p.iso <= todayForMap && !p.postponed;
+    });
+
+    var statEvents = document.querySelector("#stat-events");
+    var statLocations = document.querySelector("#stat-locations");
+    if (statEvents) statEvents.textContent = mapPins.length;
+    if (statLocations) {
+      var uniqueSpots = {};
+      mapPins.forEach(function (p) { uniqueSpots[p.lat + "," + p.lng] = true; });
+      statLocations.textContent = Object.keys(uniqueSpots).length;
+    }
 
     var cityMap = L.map(mapEl, { scrollWheelZoom: false }).setView([13.74, 100.53], 12);
 
