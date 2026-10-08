@@ -1041,18 +1041,39 @@ section:last-of-type {
 
 @media (max-width: 620px) {
   .video-grid {
-    gap: 28px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 12px;
   }
 
   .video-item {
     flex-direction: column;
     align-items: center;
+    gap: 12px;
     text-align: center;
   }
 
+  .video-thumb {
+    max-width: none;
+  }
+
   .video-caption {
-    max-width: 220px;
+    max-width: none;
+    gap: 4px;
     align-items: center;
+  }
+
+  .video-caption-eyebrow {
+    font-size: 0.6rem;
+  }
+
+  .video-caption-title {
+    font-size: 0.8rem;
+  }
+
+  .video-caption-desc {
+    font-size: 0.7rem;
+    line-height: 1.4;
   }
 }
 
@@ -1159,10 +1180,10 @@ section:last-of-type {
 @media (max-width: 620px) {
   .partner-grid { gap: 36px; }
 
-  .partner-tier { --tier-gap: 14px; }
-  .partner-tier.tier-1 { --cols: 2; }
-  .partner-tier.tier-2 { --cols: 3; }
-  .partner-tier.tier-3 { --cols: 4; --tier-gap: 10px; }
+  .partner-tier { --tier-gap: 10px; }
+  .partner-tier.tier-1 { --cols: 3; }
+  .partner-tier.tier-2 { --cols: 4; }
+  .partner-tier.tier-3 { --cols: 5; --tier-gap: 8px; }
 
   .tier-1 .partner-logo-box { padding: 10px; }
   .tier-2 .partner-logo-box { padding: 7px; }
@@ -1172,9 +1193,9 @@ section:last-of-type {
   .tier-2 .partner-logo-box img { border-radius: 7px; }
   .tier-3 .partner-logo-box img { border-radius: 5px; }
 
-  .tier-1 .partner-item span { font-size: 0.8rem; }
-  .tier-2 .partner-item span { font-size: 0.72rem; }
-  .tier-3 .partner-item span { font-size: 0.62rem; }
+  .tier-1 .partner-item span { font-size: 0.74rem; }
+  .tier-2 .partner-item span { font-size: 0.66rem; }
+  .tier-3 .partner-item span { font-size: 0.58rem; }
 }
 
 .partner-logo-box {
