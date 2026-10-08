@@ -432,7 +432,17 @@ section:last-of-type {
   }
 
   .stats-row {
-    gap: 28px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .stat .num {
+    font-size: 2rem;
+  }
+
+  .stat .label {
+    font-size: 0.62rem;
   }
 }
 
@@ -812,13 +822,21 @@ section:last-of-type {
   text-decoration: underline;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 810px) {
   .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
+    max-width: 520px;
+    margin: 0 auto;
   }
 
   .gallery-card {
-    width: 150px;
+    width: auto;
+  }
+
+  .gallery-card:first-child:nth-last-child(odd) {
+    grid-column: span 2;
   }
 }
 
@@ -1148,22 +1166,24 @@ section:last-of-type {
 
 .partner-tier {
   --tier-gap: 28px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
   gap: 32px var(--tier-gap);
+  margin: 0 auto;
 }
 
-.partner-tier.tier-1 { --cols: 3; --tier-max: 220px; }
-.partner-tier.tier-2 { --cols: 6; --tier-max: 150px; }
-.partner-tier.tier-3 { --cols: 7; --tier-max: 110px; --tier-gap: 24px; }
+.partner-tier.tier-1 { grid-template-columns: repeat(3, 1fr); width: min(100%, 716px); }
+.partner-tier.tier-2 { grid-template-columns: repeat(6, 1fr); }
+.partner-tier.tier-3 { --tier-gap: 24px; grid-template-columns: repeat(12, 1fr); width: 78%; }
+
+.tier-3 .partner-item { grid-column: span 2; }
+.tier-3 .partner-item:nth-child(7) { grid-column: 2 / span 2; }
 
 .partner-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  width: min(var(--tier-max), calc((100% - (var(--cols) - 1) * var(--tier-gap)) / var(--cols)));
+  min-width: 0;
 }
 
 .tier-1 .partner-logo-box { padding: 12px; }
@@ -1181,9 +1201,10 @@ section:last-of-type {
   .partner-grid { gap: 36px; }
 
   .partner-tier { --tier-gap: 10px; }
-  .partner-tier.tier-1 { --cols: 3; }
-  .partner-tier.tier-2 { --cols: 4; }
-  .partner-tier.tier-3 { --cols: 5; --tier-gap: 8px; }
+  .partner-tier.tier-2 { grid-template-columns: repeat(3, 1fr); width: 80%; }
+  .partner-tier.tier-3 { --tier-gap: 8px; grid-template-columns: repeat(8, 1fr); width: 80%; }
+  .tier-3 .partner-item:nth-child(7) { grid-column: span 2; }
+  .tier-3 .partner-item:nth-child(9) { grid-column: 2 / span 2; }
 
   .tier-1 .partner-logo-box { padding: 10px; }
   .tier-2 .partner-logo-box { padding: 7px; }
