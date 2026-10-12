@@ -309,6 +309,13 @@ section:last-of-type {
   background: url("../images/hero-bg.jpg") center 68% / cover no-repeat;
   opacity: 0.2;
   z-index: 0;
+  will-change: transform;
+  animation: hero-drift 26s ease-in-out infinite alternate;
+}
+
+@keyframes hero-drift {
+  from { transform: scale(1) translate3d(0, 0, 0); }
+  to { transform: scale(1.14) translate3d(-2.5%, -2%, 0); }
 }
 
 .hero .container {
@@ -323,11 +330,18 @@ section:last-of-type {
   width: 110px;
   height: auto;
   margin-bottom: 24px;
+  animation: hero-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .hero h1 {
   font-size: clamp(2.8rem, 8vw, 6.5rem);
   max-width: 900px;
+  animation: hero-rise 0.9s 0.15s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .hero-cta {
@@ -335,6 +349,7 @@ section:last-of-type {
   gap: 2px;
   margin-top: 40px;
   padding: 12px 26px;
+  animation: hero-rise 0.9s 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .hero-cta-main {
@@ -355,12 +370,22 @@ section:last-of-type {
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  animation: bob 2.2s ease-in-out infinite;
+  animation: hero-rise 0.9s 0.5s cubic-bezier(0.22, 1, 0.36, 1) both, bob 2.2s 1.4s ease-in-out infinite;
 }
 
 @keyframes bob {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(8px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero::before,
+  .hero-logo,
+  .hero h1,
+  .hero-cta,
+  .hero .scroll-cue {
+    animation: none;
+  }
 }
 
 /* City map -------------------------------------------------------------- */
