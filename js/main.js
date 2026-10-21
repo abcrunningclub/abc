@@ -248,8 +248,11 @@ document.addEventListener("DOMContentLoaded", function () {
       date: "2026-10-17",
       title: "A.B.C x Sunnies",
       location: "Dusit Central Park",
+      image: "images/gallery/sunnies-run-poster.jpg",
       links: [
-        { label: "Luma On! ↗", url: "https://luma.com/abe0nfk4" }
+        { label: "Luma On! ↗", url: "https://luma.com/abe0nfk4" },
+        { label: "View Album 1 ↗", url: "https://drive.google.com/drive/folders/1K7FWrJCCQ6NUxmgB1gJzn4JbHirxdXcg?usp=sharing" },
+        { label: "View Album 2 ↗", url: "https://drive.google.com/drive/folders/1oOqOJ2LzqhYe-mWqlHMUSrGMPQW-Ey2z" }
       ]
     },
     {
