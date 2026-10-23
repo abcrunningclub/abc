@@ -260,8 +260,10 @@ document.addEventListener("DOMContentLoaded", function () {
       endDate: "2026-10-18",
       title: "A.B.C x MG Rally",
       location: "Phetchaburi",
+      image: "images/gallery/mg-rally-cover.jpg",
       links: [
-        { label: "Invited", status: "Invited", url: "#", tbc: true }
+        { label: "Invited", status: "Invited", url: "#", tbc: true },
+        { label: "View Album ↗", url: "https://drive.google.com/drive/folders/1cYlMv_wsV9eARZ1kotEy0RHQJTRV-Zdf" }
       ]
     },
     {
