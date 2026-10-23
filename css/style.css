@@ -832,6 +832,14 @@ section:last-of-type {
   transform: scale(1.06);
 }
 
+.gallery-card.square-cover {
+  background: #000;
+}
+
+.gallery-card.square-cover img {
+  object-fit: contain;
+}
+
 .gallery-card .overlay {
   position: absolute;
   inset: 0;

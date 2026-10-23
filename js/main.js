@@ -319,7 +319,7 @@ document.addEventListener("DOMContentLoaded", function () {
       location: "Gaysorn Amarin",
       image: "images/gallery/sushi-in-motion.avif",
       links: [
-        { label: "To be Announced", url: "#", tbc: true }
+        { label: "View Album ↗", url: "https://drive.google.com/drive/folders/1sqU41S1NAVpgx-wUxcPMagTb0sKTK47A" }
       ]
     },
     {
