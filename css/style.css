@@ -1138,6 +1138,12 @@ section:last-of-type {
     text-align: center;
   }
 
+  .video-item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc((100% - 12px) / 2);
+  }
+
   .video-thumb {
     max-width: none;
   }
