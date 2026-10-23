@@ -46,12 +46,12 @@ document.addEventListener("DOMContentLoaded", function () {
       { name: "ABC x Makro RakMakRuntothePro", date: "Sep 13", iso: "2026-09-13", lat: 13.7097744, lng: 100.5353689 },
       { name: "A.B.C x Dutchmill", date: "Oct 3", iso: "2026-10-03", lat: 13.7584478, lng: 100.5344687 },
       { name: "A.B.C x Sunnies", date: "Oct 17", iso: "2026-10-17", lat: 13.7287601, lng: 100.5375563 },
-      { name: "A.B.C x MG Rally", date: "Oct 17–18", iso: "2026-10-17", lat: 12.9035085, lng: 99.634135 },
+      { name: "A.B.C x MG Rally", area: "Phetchaburi", date: "Oct 17–18", iso: "2026-10-17", lat: 13.0957579, lng: 99.9688636 },
       { name: "A.B.C x SUHO Sushi", date: "Oct 23", iso: "2026-10-23", lat: 13.743631, lng: 100.5406107 },
       { name: "A.B.C x Emily's | City Stride and Shred", date: "Oct 24", iso: "2026-10-24", lat: 13.7283702, lng: 100.5811107 },
       { name: "A.B.C x Terry | The Answer for Better Start", date: "Oct 31", iso: "2026-10-31", lat: 13.7169821, lng: 100.5320319 },
       { name: "A.B.C x Chongjaroen OSOD The ParQ | Halloween", date: "Oct 31", iso: "2026-10-31", lat: 13.7210742, lng: 100.558266 },
-      { name: "Nescafe Run KKC", date: "Nov 8", iso: "2026-11-08", lat: 16.432153, lng: 102.8235572 }
+      { name: "Nescafe Run KKC", area: "Khon Kaen", date: "Nov 8", iso: "2026-11-08", lat: 16.432153, lng: 102.8235572 }
     ];
 
     var nowForMap = new Date();
@@ -72,7 +72,8 @@ document.addEventListener("DOMContentLoaded", function () {
       statLocations.textContent = Object.keys(uniqueSpots).length;
     }
 
-    var cityMap = L.map(mapEl, { scrollWheelZoom: false }).setView([13.74, 100.53], 12);
+    var bangkokCenter = [13.74, 100.53];
+    var cityMap = L.map(mapEl, { scrollWheelZoom: false }).setView(bangkokCenter, 12);
 
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution: "&copy; OpenStreetMap contributors",
@@ -86,10 +87,53 @@ document.addEventListener("DOMContentLoaded", function () {
       iconAnchor: [7, 7]
     });
 
+    var placedPins = [];
     mapPins.forEach(function (e) {
-      L.marker([e.lat, e.lng], { icon: mapPinIcon }).addTo(cityMap)
+      var marker = L.marker([e.lat, e.lng], { icon: mapPinIcon }).addTo(cityMap)
         .bindPopup('<div class="popup-title">' + e.name + '</div><div class="popup-date">' + e.date + '</div>');
+      placedPins.push({ pin: e, marker: marker });
     });
+
+    function kmFromBangkok(lat, lng) {
+      var rad = Math.PI / 180;
+      var dLat = (lat - bangkokCenter[0]) * rad;
+      var dLng = (lng - bangkokCenter[1]) * rad;
+      var a = Math.pow(Math.sin(dLat / 2), 2) +
+        Math.cos(bangkokCenter[0] * rad) * Math.cos(lat * rad) * Math.pow(Math.sin(dLng / 2), 2);
+      return 2 * 6371 * Math.asin(Math.sqrt(a));
+    }
+
+    var jumpRow = document.querySelector("#map-jump");
+    var farPins = placedPins.filter(function (p) { return kmFromBangkok(p.pin.lat, p.pin.lng) > 60; });
+    if (jumpRow && farPins.length) {
+      var chips = [];
+      var addChip = function (label, onClick) {
+        var chip = document.createElement("button");
+        chip.type = "button";
+        chip.className = "map-chip";
+        chip.textContent = label;
+        chip.addEventListener("click", function () {
+          chips.forEach(function (c) { c.classList.toggle("active", c === chip); });
+          onClick();
+        });
+        jumpRow.appendChild(chip);
+        chips.push(chip);
+        return chip;
+      };
+
+      var homeChip = addChip("Bangkok", function () {
+        cityMap.closePopup();
+        cityMap.flyTo(bangkokCenter, 12);
+      });
+      homeChip.classList.add("active");
+
+      farPins.forEach(function (p) {
+        addChip(p.pin.area ? p.pin.name + " · " + p.pin.area : p.pin.name, function () {
+          cityMap.once("moveend", function () { p.marker.openPopup(); });
+          cityMap.flyTo([p.pin.lat, p.pin.lng], 11);
+        });
+      });
+    }
   }
 
   /* Event data -------------------------------------------------------- */

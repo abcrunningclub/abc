@@ -424,6 +424,40 @@ section:last-of-type {
   color: var(--color-accent);
 }
 
+.map-jump {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.map-jump:empty {
+  display: none;
+}
+
+.map-chip {
+  padding: 7px 16px;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-text-dim);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.map-chip:hover {
+  color: var(--color-text);
+  border-color: var(--color-text-dim);
+}
+
+.map-chip.active {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
 .stats-row {
   display: flex;
   justify-content: center;
