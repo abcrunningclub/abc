@@ -48,7 +48,8 @@ document.addEventListener("DOMContentLoaded", function () {
       { name: "A.B.C x Sunnies", date: "Oct 17", iso: "2026-10-17", lat: 13.7287601, lng: 100.5375563 },
       { name: "A.B.C x MG Rally", date: "Oct 17–18", iso: "2026-10-17", lat: 12.9035085, lng: 99.634135 },
       { name: "A.B.C x SUHO Sushi", date: "Oct 23", iso: "2026-10-23", lat: 13.743631, lng: 100.5406107 },
-      { name: "A.B.C x Emily's | City Stride and Shred", date: "Oct 24", iso: "2026-10-24", lat: 13.7283702, lng: 100.5811107 }
+      { name: "A.B.C x Emily's | City Stride and Shred", date: "Oct 24", iso: "2026-10-24", lat: 13.7283702, lng: 100.5811107 },
+      { name: "A.B.C x Terry | The Answer for Better Start", date: "Oct 31", iso: "2026-10-31", lat: 13.7169821, lng: 100.5320319 }
     ];
 
     var nowForMap = new Date();
@@ -278,6 +279,14 @@ document.addEventListener("DOMContentLoaded", function () {
       date: "2026-10-24",
       title: "A.B.C x Emily's | City Stride and Shred",
       location: "Marche Thonglor",
+      links: [
+        { label: "To be Announced", url: "#", tbc: true }
+      ]
+    },
+    {
+      date: "2026-10-31",
+      title: "A.B.C x Terry | The Answer for Better Start",
+      location: "Crunch x Pan Bagels",
       links: [
         { label: "To be Announced", url: "#", tbc: true }
       ]
