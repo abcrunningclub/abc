@@ -50,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
       { name: "Sushi in Motion", date: "Oct 23", iso: "2026-10-23", lat: 13.7439979, lng: 100.5413947 },
       { name: "A.B.C x Emily's | City Stride and Shred", date: "Oct 24", iso: "2026-10-24", lat: 13.7283702, lng: 100.5811107 },
       { name: "A.B.C x Terry | The Answer for Better Start", date: "Oct 31", iso: "2026-10-31", lat: 13.7169821, lng: 100.5320319 },
-      { name: "A.B.C x Chongjaroen OSOD The ParQ | Halloween", date: "Oct 31", iso: "2026-10-31", lat: 13.7210742, lng: 100.558266 },
       { name: "Nescafe Run KKC", area: "Khon Kaen", date: "Nov 8", iso: "2026-11-08", lat: 16.432153, lng: 102.8235572 }
     ];
 
@@ -335,15 +334,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "A.B.C x Terry | The Answer for Better Start",
       location: "Crunch x Pan Bagels",
       links: [
-        { label: "To be Announced", url: "#", tbc: true }
-      ]
-    },
-    {
-      date: "2026-10-31",
-      title: "A.B.C x Chongjaroen OSOD The ParQ | Halloween",
-      location: "The ParQ",
-      links: [
-        { label: "To be Announced", url: "#", tbc: true }
+        { label: "View Album ↗", status: "View Album ↗", url: "https://drive.google.com/drive/folders/1dSgOT5gZbavMinPZ4WpfbiU9_SkEI1Zv" }
       ]
     },
     {
