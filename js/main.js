@@ -333,6 +333,7 @@ document.addEventListener("DOMContentLoaded", function () {
       date: "2026-10-31",
       title: "A.B.C x Terry | The Answer for Better Start",
       location: "Crunch x Pan Bagels",
+      image: "images/gallery/terry-better-start.jpg",
       links: [
         { label: "View Album ↗", status: "View Album ↗", url: "https://drive.google.com/drive/folders/1dSgOT5gZbavMinPZ4WpfbiU9_SkEI1Zv" }
       ]
@@ -367,7 +368,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function isPast(dateStr) {
     var today = new Date();
     today.setHours(0, 0, 0, 0);
-    return new Date(dateStr + "T00:00:00") < today;
+    return new Date(dateStr + "T00:00:00") <= today;
   }
 
   var now = new Date();
@@ -464,7 +465,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var todayISO = toISODate(today.getFullYear(), today.getMonth(), today.getDate());
 
     var upcoming = events
-      .filter(function (e) { return (e.endDate || e.date) >= todayISO; })
+      .filter(function (e) { return e.date > todayISO; })
       .sort(function (a, b) { return a.date < b.date ? -1 : 1; });
 
     upcomingList.innerHTML = "";
