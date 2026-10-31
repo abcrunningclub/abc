@@ -345,6 +345,14 @@ document.addEventListener("DOMContentLoaded", function () {
       links: [
         { label: "Invited", status: "Invited", url: "#", tbc: true }
       ]
+    },
+    {
+      date: "2026-11-08",
+      title: "A.B.C x Baytong Chicken Rice",
+      location: "Nanglinchee",
+      links: [
+        { label: "To be Announced", url: "#", tbc: true }
+      ]
     }
   ];
 
