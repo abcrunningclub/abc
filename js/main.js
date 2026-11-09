@@ -50,7 +50,11 @@ document.addEventListener("DOMContentLoaded", function () {
       { name: "Sushi in Motion", date: "Oct 23", iso: "2026-10-23", lat: 13.7439979, lng: 100.5413947 },
       { name: "A.B.C x Emily's | City Stride and Shred", date: "Oct 24", iso: "2026-10-24", lat: 13.7283702, lng: 100.5811107 },
       { name: "A.B.C x Terry | The Answer for Better Start", date: "Oct 31", iso: "2026-10-31", lat: 13.7169821, lng: 100.5320319 },
-      { name: "Nescafe Run KKC", area: "Khon Kaen", date: "Nov 8", iso: "2026-11-08", lat: 16.432153, lng: 102.8235572 }
+      { name: "Nescafe Run KKC", area: "Khon Kaen", date: "Nov 8", iso: "2026-11-08", lat: 16.432153, lng: 102.8235572 },
+      { name: "A.B.C x Baytong Chicken Rice", date: "Nov 8", iso: "2026-11-08", lat: 13.7081891, lng: 100.5431632 },
+      { name: "Pocari Sweat Trail", area: "Chiang Mai", date: "Nov 14–15", iso: "2026-11-14", lat: 18.8267708, lng: 98.961488 },
+      { name: "MG Pet Conference", date: "Nov 21", iso: "2026-11-21", lat: 13.7460882, lng: 100.5920521 },
+      { name: "A.B.C x Breeze | Dare to Sweat", date: "Nov 22", iso: "2026-11-22", lat: 13.7265493, lng: 100.5460656 }
     ];
 
     var nowForMap = new Date();
@@ -352,6 +356,31 @@ document.addEventListener("DOMContentLoaded", function () {
       location: "Nanglinchee",
       links: [
         { label: "To be Announced", url: "#", tbc: true }
+      ]
+    },
+    {
+      date: "2026-11-14",
+      endDate: "2026-11-15",
+      title: "Pocari Sweat Trail",
+      location: "Chiang Mai",
+      links: [
+        { label: "Joined", status: "Joined", url: "#", tbc: true }
+      ]
+    },
+    {
+      date: "2026-11-21",
+      title: "MG Pet Conference",
+      location: "Hund Haus",
+      links: [
+        { label: "Brand Event", status: "Brand Event", url: "#", tbc: true }
+      ]
+    },
+    {
+      date: "2026-11-22",
+      title: "A.B.C x Breeze | Dare to Sweat",
+      location: "The Wireless Club",
+      links: [
+        { label: "Luma On! ↗", url: "https://luma.com/9h6yo2er" }
       ]
     }
   ];
