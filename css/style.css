@@ -1251,7 +1251,6 @@ section:last-of-type {
 .tier-2 .partner-item { grid-column: span 2; }
 .tier-2 .partner-item:nth-child(5) { grid-column: 2 / span 2; }
 .tier-3 .partner-item { grid-column: span 2; }
-.tier-3 .partner-item:nth-child(7) { grid-column: 2 / span 2; }
 
 .partner-item {
   display: flex;
@@ -1278,8 +1277,6 @@ section:last-of-type {
   .partner-tier { --tier-gap: 10px; }
   .partner-tier.tier-2 { width: 92%; }
   .partner-tier.tier-3 { --tier-gap: 8px; grid-template-columns: repeat(8, 1fr); width: 80%; }
-  .tier-3 .partner-item:nth-child(7) { grid-column: span 2; }
-  .tier-3 .partner-item:nth-child(9) { grid-column: 2 / span 2; }
 
   .tier-1 .partner-logo-box { padding: 10px; }
   .tier-2 .partner-logo-box { padding: 7px; }
