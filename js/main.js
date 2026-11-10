@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
       { name: "A.B.C x Emily's | City Stride and Shred", date: "Oct 24", iso: "2026-10-24", lat: 13.7283702, lng: 100.5811107 },
       { name: "A.B.C x Terry | The Answer for Better Start", date: "Oct 31", iso: "2026-10-31", lat: 13.7169821, lng: 100.5320319 },
       { name: "Nescafe Run KKC", area: "Khon Kaen", date: "Nov 8", iso: "2026-11-08", lat: 16.432153, lng: 102.8235572 },
-      { name: "A.B.C x Baytong Chicken Rice", date: "Nov 8", iso: "2026-11-08", lat: 13.7081891, lng: 100.5431632 },
+      { name: "A.B.C x Baytong Chicken Rice | Run for Rice", date: "Nov 8", iso: "2026-11-08", lat: 13.7081891, lng: 100.5431632 },
       { name: "Pocari Sweat Trail", area: "Chiang Mai", date: "Nov 14–15", iso: "2026-11-14", lat: 18.8267708, lng: 98.961488 },
       { name: "MG Pet Conference", date: "Nov 21", iso: "2026-11-21", lat: 13.7460882, lng: 100.5920521 },
       { name: "A.B.C x Breeze | Dare to Sweat", date: "Nov 22", iso: "2026-11-22", lat: 13.7265493, lng: 100.5460656 }
@@ -352,10 +352,11 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       date: "2026-11-08",
-      title: "A.B.C x Baytong Chicken Rice",
+      title: "A.B.C x Baytong Chicken Rice | Run for Rice",
       location: "Nanglinchee",
+      image: "images/gallery/baytong-run-for-rice.jpg",
       links: [
-        { label: "To be Announced", url: "#", tbc: true }
+        { label: "View Album ↗", status: "View Album ↗", url: "https://drive.google.com/drive/folders/1ZG8j-i429OBQWOi52TmrEuTjPxYvoAAY" }
       ]
     },
     {
