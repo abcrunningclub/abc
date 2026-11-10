@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
       homeChip.classList.add("active");
 
       farPins.forEach(function (p) {
-        addChip(p.pin.area ? p.pin.name + " · " + p.pin.area : p.pin.name, function () {
+        addChip(p.pin.area || p.pin.name, function () {
           cityMap.once("moveend", function () { p.marker.openPopup(); });
           cityMap.flyTo([p.pin.lat, p.pin.lng], 11);
         });
